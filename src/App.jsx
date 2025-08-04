@@ -5,7 +5,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 const App = () => (
   <ThemeProvider>
     <div className="theme-main-bg w-full overflow-hidden transition-all duration-500">
-      <div className={`theme-hero-bg ${styles.paddingX} ${styles.flexCenter}`}>
+      <div className={`theme-hero-bg px-4 sm:px-6 lg:px-16 ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
         </div>
@@ -17,7 +17,7 @@ const App = () => (
         </div>
       </div>
 
-      <div className={`theme-hero-bg ${styles.paddingX} ${styles.flexCenter}`}>
+      <div className={`theme-hero-bg px-4 sm:px-6 lg:px-16 ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <About />
           <Services />

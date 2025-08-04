@@ -103,25 +103,25 @@ const Gallery = () => {
         : galleryItems.filter(item => item.category === selectedCategory);
 
     return (
-        <section id="gallery" className="py-16 px-6 sm:px-16">
+        <section id="gallery" className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
-                <div className="text-center mb-12">
-                    <h2 className="font-poppins font-semibold xs:text-[48px] text-[40px] text-gray-900 dark:text-white xs:leading-[76.8px] leading-[66.8px] mb-6">
+                <div className="text-center mb-10 sm:mb-12">
+                    <h2 className="font-poppins font-semibold text-[28px] xs:text-[32px] sm:text-[40px] lg:text-[48px] text-gray-900 dark:text-white leading-[36px] xs:leading-[40px] sm:leading-[50px] lg:leading-[76.8px] mb-4 sm:mb-6">
                         Our <span className="text-gradient">Work</span> Gallery
                     </h2>
-                    <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[18px] leading-[30.8px] max-w-[600px] mx-auto">
+                    <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[14px] xs:text-[16px] sm:text-[18px] leading-[22px] xs:leading-[26px] sm:leading-[30.8px] max-w-full sm:max-w-[600px] mx-auto px-2 sm:px-0">
                         Explore our professional security equipment, dedicated team members, and recent successful installations across Kolkata.
                     </p>
                 </div>
 
                 {/* Category Filter */}
-                <div className="flex flex-wrap justify-center gap-4 mb-12">
+                <div className="flex flex-wrap justify-center gap-2 xs:gap-3 sm:gap-4 mb-10 sm:mb-12 px-2 sm:px-0">
                     {categories.map((category) => (
                         <button
                             key={category.id}
                             onClick={() => setSelectedCategory(category.id)}
-                            className={`px-6 py-3 rounded-[10px] font-poppins font-medium text-[16px] transition-all duration-300 ${selectedCategory === category.id
+                            className={`px-3 xs:px-4 sm:px-6 py-2 xs:py-2.5 sm:py-3 rounded-[8px] sm:rounded-[10px] font-poppins font-medium text-[12px] xs:text-[14px] sm:text-[16px] transition-all duration-300 ${selectedCategory === category.id
                                 ? "bg-blue-600 text-white shadow-lg"
                                 : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-gray-700"
                                 }`}
@@ -132,11 +132,11 @@ const Gallery = () => {
                 </div>
 
                 {/* Pinterest-style Gallery Grid */}
-                <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+                <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-3 sm:gap-4 lg:gap-6 space-y-3 sm:space-y-4 lg:space-y-6">
                     {filteredItems.map((item, index) => (
                         <div
                             key={item.id}
-                            className="break-inside-avoid group relative overflow-hidden rounded-[20px] bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] mb-6"
+                            className="break-inside-avoid group relative overflow-hidden rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] mb-3 sm:mb-4 lg:mb-6"
                             style={{
                                 animationDelay: `${index * 100}ms`
                             }}
@@ -148,27 +148,31 @@ const Gallery = () => {
                                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
                                     loading="lazy"
                                     style={{
-                                        height: `${Math.floor(Math.random() * 150) + 200}px` // Random heights for Pinterest effect
+                                        height: window.innerWidth >= 1024
+                                            ? `${Math.floor(Math.random() * 150) + 200}px` // Random heights for desktop Pinterest effect
+                                            : window.innerWidth >= 640
+                                                ? `${Math.floor(Math.random() * 100) + 180}px` // Smaller random heights for tablets
+                                                : `200px` // Fixed height for mobile for consistency
                                     }}
                                 />
 
                                 {/* Overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div className="absolute bottom-4 left-4 right-4">
-                                        <h3 className="font-poppins font-semibold text-white text-[16px] mb-1">
+                                    <div className="absolute bottom-2 sm:bottom-3 lg:bottom-4 left-2 sm:left-3 lg:left-4 right-2 sm:right-3 lg:right-4">
+                                        <h3 className="font-poppins font-semibold text-white text-[12px] xs:text-[14px] sm:text-[16px] mb-1">
                                             {item.title}
                                         </h3>
-                                        <p className="font-poppins text-white/80 text-[12px]">
+                                        <p className="font-poppins text-white/80 text-[10px] xs:text-[11px] sm:text-[12px]">
                                             📍 {item.location}
                                         </p>
                                     </div>
                                 </div>
 
                                 {/* Category Badge */}
-                                <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <span className={`px-3 py-1 rounded-full text-xs font-medium text-white backdrop-blur-sm ${item.category === 'equipment' ? 'bg-blue-500/80' :
-                                            item.category === 'staff' ? 'bg-green-500/80' :
-                                                'bg-purple-500/80'
+                                <div className="absolute top-2 sm:top-3 right-2 sm:right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <span className={`px-2 sm:px-3 py-1 rounded-full text-[10px] xs:text-[11px] sm:text-xs font-medium text-white backdrop-blur-sm ${item.category === 'equipment' ? 'bg-blue-500/80' :
+                                        item.category === 'staff' ? 'bg-green-500/80' :
+                                            'bg-purple-500/80'
                                         }`}>
                                         {item.category === 'equipment' ? 'Equipment' :
                                             item.category === 'staff' ? 'Team' : 'Work'}
@@ -180,17 +184,17 @@ const Gallery = () => {
                 </div>
 
                 {/* Call to Action */}
-                <div className="text-center mt-16">
-                    <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-[20px] p-8">
-                        <h3 className="font-poppins font-semibold text-[28px] text-gray-900 dark:text-white mb-4">
+                <div className="text-center mt-12 sm:mt-16 px-2 sm:px-0">
+                    <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] p-4 sm:p-6 lg:p-8">
+                        <h3 className="font-poppins font-semibold text-[20px] xs:text-[24px] sm:text-[28px] text-gray-900 dark:text-white mb-3 sm:mb-4">
                             Need Professional Security Solutions?
                         </h3>
-                        <p className="font-poppins text-gray-600 dark:text-dimWhite text-[18px] mb-6 max-w-[500px] mx-auto">
+                        <p className="font-poppins text-gray-600 dark:text-dimWhite text-[14px] xs:text-[16px] sm:text-[18px] mb-4 sm:mb-6 max-w-full sm:max-w-[500px] mx-auto">
                             Contact us today to discuss your security requirements and see how our professional team and advanced equipment can protect your property.
                         </p>
                         <a
                             href="#contact"
-                            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-poppins font-medium text-[18px] px-8 py-4 rounded-[12px] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-poppins font-medium text-[14px] xs:text-[16px] sm:text-[18px] px-6 sm:px-8 py-3 sm:py-4 rounded-[10px] sm:rounded-[12px] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                         >
                             Get a Quote
                         </a>

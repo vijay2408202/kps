@@ -4,18 +4,18 @@ import GetStarted from "./GetStarted";
 
 const Hero = () => {
   return (
-    <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
-      <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
-        <div className="flex flex-row items-center py-[6px] px-4 bg-gray-800 rounded-[10px] mb-2 border border-gray-600">
-          <img src={discount} alt="discount" className="w-[32px] h-[32px]" />
-          <p className={`font-poppins font-normal text-gray-200 text-[18px] leading-[30.8px] ml-2`}>
+    <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY} min-h-screen md:min-h-0`}>
+      <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-4`}>
+        <div className="flex flex-row items-center py-2 sm:py-[6px] px-3 sm:px-4 bg-gray-800 dark:bg-gray-800 rounded-[8px] sm:rounded-[10px] mb-4 sm:mb-2 border border-gray-600 w-fit">
+          <img src={discount} alt="discount" className="w-[24px] h-[24px] sm:w-[32px] sm:h-[32px]" />
+          <p className={`font-poppins font-normal text-gray-200 text-[14px] sm:text-[16px] md:text-[18px] leading-[20px] sm:leading-[24px] md:leading-[30.8px] ml-2`}>
             <span className="text-blue-400">20+</span> Years of{" "}
             <span className="text-blue-400">Trusted</span> Service
           </p>
         </div>
 
         <div className="flex flex-row justify-between items-center w-full">
-          <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-gray-900 dark:text-white ss:leading-[100.8px] leading-[75px]">
+          <h1 className="flex-1 font-poppins font-semibold text-[32px] xs:text-[40px] sm:text-[52px] ss:text-[72px] text-gray-900 dark:text-white leading-[40px] xs:leading-[50px] sm:leading-[65px] ss:leading-[100.8px]">
             Krishna <br className="sm:block hidden" />{" "}
             <span className="text-gradient">Protection</span>{" "}
           </h1>
@@ -24,34 +24,35 @@ const Hero = () => {
           </div>
         </div>
 
-        <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-gray-900 dark:text-white ss:leading-[100.8px] leading-[75px] w-full">
+        <h1 className="font-poppins font-semibold text-[32px] xs:text-[40px] sm:text-[52px] ss:text-[68px] text-gray-900 dark:text-white leading-[40px] xs:leading-[50px] sm:leading-[65px] ss:leading-[100.8px] w-full">
           Security Services
         </h1>
-        <p className={`font-poppins font-normal text-gray-600 dark:text-dimWhite text-[18px] leading-[30.8px] max-w-[470px] mt-5`}>
+        <p className={`font-poppins font-normal text-gray-600 dark:text-dimWhite text-[14px] xs:text-[16px] sm:text-[18px] leading-[22px] xs:leading-[26px] sm:leading-[30.8px] max-w-full sm:max-w-[470px] mt-4 sm:mt-5`}>
           Professional & Reliable Security Guard Services. With 20+ years of experience, we provide trusted security solutions for businesses, events, and properties across Kolkata.
         </p>
 
-        <div className="flex flex-row gap-4 mt-8">
-          <a href="tel:+919748025247" className="bg-blue-600 dark:bg-blue-gradient font-poppins font-medium text-[18px] text-white dark:text-primary outline-none px-6 py-4 rounded-[10px] hover:bg-blue-700 dark:hover:bg-white dark:hover:text-primary transition-all duration-300">
-            Call Now: +91 97480 25247
+        <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 mt-6 sm:mt-8 w-full xs:w-auto">
+          <a href="tel:+919748025247" className="bg-blue-600 dark:bg-blue-gradient font-poppins font-medium text-[14px] xs:text-[16px] sm:text-[18px] text-white dark:text-primary outline-none px-4 xs:px-6 py-3 xs:py-4 rounded-[8px] sm:rounded-[10px] hover:bg-blue-700 dark:hover:bg-white dark:hover:text-primary transition-all duration-300 text-center">
+            <span className="xs:hidden">Call: +91 97480 25247</span>
+            <span className="hidden xs:inline">Call Now: +91 97480 25247</span>
           </a>
-          <button className="border-2 border-blue-600 dark:border-blue-gradient font-poppins font-medium text-[18px] text-blue-600 dark:text-white outline-none px-6 py-4 rounded-[10px] hover:bg-blue-600 hover:text-white dark:hover:bg-blue-gradient dark:hover:text-primary transition-all duration-300">
+          <button className="border-2 border-blue-600 dark:border-blue-gradient font-poppins font-medium text-[14px] xs:text-[16px] sm:text-[18px] text-blue-600 dark:text-white outline-none px-4 xs:px-6 py-3 xs:py-4 rounded-[8px] sm:rounded-[10px] hover:bg-blue-600 hover:text-white dark:hover:bg-blue-gradient dark:hover:text-primary transition-all duration-300 text-center">
             Get Quote
           </button>
         </div>
       </div>
 
-      <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-        <img src={hero} alt="security hero" className="w-[100%] h-[100%] relative z-[5] scale-x-[-1]" />
+      <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-6 sm:my-10 relative order-first md:order-last`}>
+        <img src={hero} alt="security hero" className="w-[80%] xs:w-[90%] sm:w-[100%] h-[80%] xs:h-[90%] sm:h-[100%] relative z-[5] scale-x-[-1]" />
 
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
-        <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40" />
-        <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient" />
+        <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-20 sm:bottom-40" />
+        <div className="absolute z-[0] w-[50%] h-[50%] right-10 sm:right-20 bottom-10 sm:bottom-20 blue__gradient" />
         {/* gradient end */}
       </div>
 
-      <div className={`ss:hidden ${styles.flexCenter}`}>
+      <div className={`ss:hidden ${styles.flexCenter} mt-6 sm:mt-0`}>
         <GetStarted />
       </div>
     </section>

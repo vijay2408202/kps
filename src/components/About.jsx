@@ -1,22 +1,6 @@
-import { features } from "../constants";
 import styles, { layout } from "../style";
 import Button from "./Button";
-import { shield } from "../assets";
 import about from "../assets/about.jpg";
-
-const FeatureCard = ({ icon, title, content, index }) => (
-  <div className="flex flex-col items-center text-center p-6 rounded-[20px] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:shadow-xl hover:scale-105 transition-all duration-300">
-    <div className={`w-[80px] h-[80px] rounded-full ${styles.flexCenter} bg-blue-100 dark:bg-dimBlue mb-4`}>
-      <img src={icon} alt={title} className="w-[60%] h-[60%] object-contain" />
-    </div>
-    <h4 className="font-poppins font-semibold text-gray-900 dark:text-white text-[20px] leading-[26px] mb-3">
-      {title}
-    </h4>
-    <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[16px] leading-[24px]">
-      {content}
-    </p>
-  </div>
-);
 
 const Business = () => (
   <section id="about" className="py-16 px-6 sm:px-16">
@@ -77,22 +61,6 @@ const Business = () => (
 
           <Button styles="inline-block" />
         </div>
-      </div>
-
-      {/* Features Section - Centered Grid */}
-      <div className="text-center mb-12">
-        <h3 className="font-poppins font-semibold text-[32px] text-gray-900 dark:text-white mb-4">
-          Why Choose Us?
-        </h3>
-        <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[18px] max-w-[600px] mx-auto">
-          Our core strengths that make us the leading security service provider in Kolkata
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {features.map((feature, index) => (
-          <FeatureCard key={feature.id} {...feature} index={index} />
-        ))}
       </div>
     </div>
   </section>

@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { close, menu } from "../assets";
 import { navLinks } from "../constants";
 import { useTheme } from "../contexts/ThemeContext";
+import { useScrollAnimation } from "../hooks/useCountAnimation";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { isDark, toggleTheme } = useTheme();
+  const { elementRef, isVisible } = useScrollAnimation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,8 +24,11 @@ const Navbar = () => {
   return (
     <>
       {/* Regular navbar for top of page */}
-      <nav className={`w-full flex py-4 sm:py-6 px-4 sm:px-6 lg:px-8 justify-between items-center navbar relative transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
-        }`}>
+      <nav
+        ref={elementRef}
+        className={`w-full flex py-4 sm:py-6 px-4 sm:px-6 lg:px-8 justify-between items-center navbar relative transition-all duration-1000 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
+          } ${isVisible ? 'translate-y-0' : '-translate-y-4'}`}
+      >
         <div className="flex items-center">
           <h1 className="font-poppins font-bold text-gray-900 dark:text-white text-[18px] xs:text-[20px] sm:text-[24px] leading-[24px] xs:leading-[28px] sm:leading-[32px]">
             <span className="sm:hidden">KPS</span>

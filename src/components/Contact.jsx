@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
+import { useScrollAnimation } from "../hooks/useCountAnimation";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -65,6 +66,9 @@ const Contact = () => {
     'Construction Site Security'
   ];
 
+  const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { elementRef: contentRef, isVisible: contentVisible } = useScrollAnimation();
+
   return (
     <section id="contact" className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-16 overflow-hidden">
       {/* Background Elements */}
@@ -74,7 +78,11 @@ const Contact = () => {
 
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12 sm:mb-16">
+        <div
+          ref={headerRef}
+          className={`text-center mb-12 sm:mb-16 transition-all duration-1000 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+        >
           <div className="inline-block">
             <h2 className="font-poppins font-bold text-[28px] xs:text-[32px] sm:text-[40px] lg:text-[48px] xl:text-[56px] text-gray-900 dark:text-white leading-[36px] xs:leading-[40px] sm:leading-[50px] lg:leading-[60px] xl:leading-[76.8px] mb-3 sm:mb-4">
               Get In <span className="text-gradient">Touch</span>
@@ -87,7 +95,11 @@ const Contact = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8">
+        <div
+          ref={contentRef}
+          className={`grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 transition-all duration-1000 ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+        >
 
           {/* Contact Info */}
           <div className="lg:col-span-2 space-y-4 sm:space-y-6">

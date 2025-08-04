@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useScrollAnimation } from "../hooks/useCountAnimation";
 
 const Gallery = () => {
     const [selectedCategory, setSelectedCategory] = useState("all");
+    const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
+    const { elementRef: galleryRef, isVisible: galleryVisible } = useScrollAnimation();
 
     // Gallery images showcasing recent works, equipment, and staff
     const galleryItems = [
@@ -106,7 +109,11 @@ const Gallery = () => {
         <section id="gallery" className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
-                <div className="text-center mb-10 sm:mb-12">
+                <div
+                    ref={headerRef}
+                    className={`text-center mb-10 sm:mb-12 transition-all duration-1000 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                        }`}
+                >
                     <h2 className="font-poppins font-semibold text-[28px] xs:text-[32px] sm:text-[40px] lg:text-[48px] text-gray-900 dark:text-white leading-[36px] xs:leading-[40px] sm:leading-[50px] lg:leading-[76.8px] mb-4 sm:mb-6">
                         Our <span className="text-gradient">Work</span> Gallery
                     </h2>
@@ -132,7 +139,11 @@ const Gallery = () => {
                 </div>
 
                 {/* Pinterest-style Gallery Grid */}
-                <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-3 sm:gap-4 lg:gap-6 space-y-3 sm:space-y-4 lg:space-y-6">
+                <div
+                    ref={galleryRef}
+                    className={`columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-3 sm:gap-4 lg:gap-6 space-y-3 sm:space-y-4 lg:space-y-6 transition-all duration-1000 ${galleryVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                        }`}
+                >
                     {filteredItems.map((item, index) => (
                         <div
                             key={item.id}

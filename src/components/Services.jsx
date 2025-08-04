@@ -1,5 +1,6 @@
 import { services } from "../constants";
 import styles, { layout } from "../style";
+import { useScrollAnimation } from "../hooks/useCountAnimation";
 
 const ServiceCard = ({ icon, title, description, backgroundImage, index }) => {
     return (
@@ -53,26 +54,39 @@ const ServiceCard = ({ icon, title, description, backgroundImage, index }) => {
     );
 };
 
-const Services = () => (
-    <section id="services" className={layout.section}>
-        <div className="w-full">
-            <div className="text-center mb-12 sm:mb-16 px-4 sm:px-0">
-                <h2 className="font-poppins font-semibold text-[28px] xs:text-[32px] sm:text-[40px] lg:text-[48px] text-gray-900 dark:text-white leading-[36px] xs:leading-[40px] sm:leading-[50px] lg:leading-[76.8px] w-full text-center">
-                    Our <span className="text-gradient">Security</span> Services
-                </h2>
-                <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[14px] xs:text-[16px] sm:text-[18px] leading-[22px] xs:leading-[26px] sm:leading-[30.8px] max-w-full sm:max-w-[600px] mx-auto mt-4 sm:mt-5 px-2 sm:px-0">
-                    Comprehensive security solutions tailored for various industries and requirements.
-                    From executive protection to event security, we've got you covered with professional services.
-                </p>
-            </div>
+const Services = () => {
+    const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
+    const { elementRef: gridRef, isVisible: gridVisible } = useScrollAnimation();
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-0">
-                {services.map((service, index) => (
-                    <ServiceCard key={service.id} {...service} index={index} />
-                ))}
+    return (
+        <section id="services" className={layout.section}>
+            <div className="w-full">
+                <div
+                    ref={headerRef}
+                    className={`text-center mb-12 sm:mb-16 px-4 sm:px-0 transition-all duration-1000 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                        }`}
+                >
+                    <h2 className="font-poppins font-semibold text-[28px] xs:text-[32px] sm:text-[40px] lg:text-[48px] text-gray-900 dark:text-white leading-[36px] xs:leading-[40px] sm:leading-[50px] lg:leading-[76.8px] w-full text-center">
+                        Our <span className="text-gradient">Security</span> Services
+                    </h2>
+                    <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[14px] xs:text-[16px] sm:text-[18px] leading-[22px] xs:leading-[26px] sm:leading-[30.8px] max-w-full sm:max-w-[600px] mx-auto mt-4 sm:mt-5 px-2 sm:px-0">
+                        Comprehensive security solutions tailored for various industries and requirements.
+                        From executive protection to event security, we've got you covered with professional services.
+                    </p>
+                </div>
+
+                <div
+                    ref={gridRef}
+                    className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-0 transition-all duration-1000 ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                        }`}
+                >
+                    {services.map((service, index) => (
+                        <ServiceCard key={service.id} {...service} index={index} />
+                    ))}
+                </div>
             </div>
-        </div>
-    </section>
-);
+        </section>
+    );
+};
 
 export default Services;

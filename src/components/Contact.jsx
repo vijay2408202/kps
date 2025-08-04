@@ -1,0 +1,267 @@
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    try {
+      // EmailJS configuration using environment variables
+      const templateParams = {
+        from_name: formData.name,
+        from_phone: formData.phone,
+        from_email: formData.email || 'No email provided',
+        service_type: formData.service,
+        message: formData.message || 'No additional message provided',
+        to_email: import.meta.env.VITE_TARGET_EMAIL,
+      };
+
+      // Send email using EmailJS with environment variables
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      setSubmitStatus('success');
+      setFormData({ name: '', phone: '', email: '', service: '', message: '' });
+
+    } catch (error) {
+      console.error('Email send failed:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const services = [
+    'Executive Protection',
+    'Event Security',
+    'Property Security',
+    'Apartment Security',
+    'Office & Mall Security',
+    'Educational Institutions',
+    'Healthcare Security',
+    'Construction Site Security'
+  ];
+
+  return (
+    <section id="contact" className="relative py-20 px-6 sm:px-16 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-gray-900/30 dark:to-blue-900/20"></div>
+      <div className="absolute top-10 left-10 w-20 h-20 bg-blue-200/30 dark:bg-blue-500/10 rounded-full blur-xl"></div>
+      <div className="absolute bottom-10 right-10 w-32 h-32 bg-purple-200/30 dark:bg-purple-500/10 rounded-full blur-xl"></div>
+
+      <div className="relative max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-block">
+            <h2 className="font-poppins font-bold text-[48px] xs:text-[56px] text-gray-900 dark:text-white leading-[60px] xs:leading-[76.8px] mb-4">
+              Get In <span className="text-gradient">Touch</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+          </div>
+          <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[20px] leading-[32px] max-w-[700px] mx-auto mt-8">
+            Ready to secure your property? Contact Krishna Protection Security for professional, reliable, and trusted security solutions available 24/7.
+          </p>
+        </div>
+
+        {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+          {/* Contact Info */}
+          <div className="lg:col-span-2 space-y-6">
+            {/* Contact Cards */}
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-[24px] border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">📞</span>
+                </div>
+                <div className="ml-4">
+                  <h3 className="font-poppins font-semibold text-[20px] text-gray-900 dark:text-white">Call Us</h3>
+                  <p className="text-gray-600 dark:text-dimWhite text-sm">Available 24/7</p>
+                </div>
+              </div>
+              <a href="tel:+919748025247" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors font-poppins font-medium text-[18px]">
+                +91 97480 25247
+              </a>
+            </div>
+
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-[24px] border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">📍</span>
+                </div>
+                <div className="ml-4">
+                  <h3 className="font-poppins font-semibold text-[20px] text-gray-900 dark:text-white">Location</h3>
+                  <p className="text-gray-600 dark:text-dimWhite text-sm">Service Areas</p>
+                </div>
+              </div>
+              <p className="text-gray-700 dark:text-dimWhite font-poppins font-medium">
+                Serving All Over Kolkata<br />
+                <span className="text-sm text-gray-600 dark:text-gray-400">Park Street, Salt Lake, New Town & More</span>
+              </p>
+            </div>
+
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-[24px] border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">✉️</span>
+                </div>
+                <div className="ml-4">
+                  <h3 className="font-poppins font-semibold text-[20px] text-gray-900 dark:text-white">Email</h3>
+                  <p className="text-gray-600 dark:text-dimWhite text-sm">Quick Response</p>
+                </div>
+              </div>
+              <p className="text-gray-700 dark:text-dimWhite font-poppins font-medium">
+                {import.meta.env.VITE_TARGET_EMAIL}
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-8 rounded-[24px] text-white">
+              <h3 className="font-poppins font-bold text-[22px] mb-4">Emergency Service</h3>
+              <p className="font-poppins text-blue-100 mb-4">Need immediate security assistance?</p>
+              <a href="tel:+919748025247" className="inline-block bg-white/20 hover:bg-white/30 px-6 py-3 rounded-[12px] font-poppins font-medium transition-all duration-300">
+                Call Now: +91 97480 25247
+              </a>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="lg:col-span-3">
+            <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-8 lg:p-10 rounded-[24px] border border-gray-200/50 dark:border-gray-700/50 shadow-xl">
+              <div className="text-center mb-8">
+                <h3 className="font-poppins font-bold text-[28px] text-gray-900 dark:text-white mb-2">
+                  Request a Quote
+                </h3>
+                <p className="text-gray-600 dark:text-dimWhite">Fill out the form and we'll get back to you within 24 hours</p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block font-poppins font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter your full name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full p-4 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-[12px] text-gray-900 dark:text-white font-poppins placeholder-gray-500 dark:placeholder-gray-400 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-300"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block font-poppins font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Phone Number *
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Enter your phone number"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full p-4 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-[12px] text-gray-900 dark:text-white font-poppins placeholder-gray-500 dark:placeholder-gray-400 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-300"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block font-poppins font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full p-4 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-[12px] text-gray-900 dark:text-white font-poppins placeholder-gray-500 dark:placeholder-gray-400 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-300"
+                  />
+                </div>
+
+                <div>
+                  <label className="block font-poppins font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Service Required *
+                  </label>
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full p-4 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-[12px] text-gray-900 dark:text-white font-poppins focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-300"
+                  >
+                    <option value="">Select a service</option>
+                    {services.map((service, index) => (
+                      <option key={index} value={service}>{service}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block font-poppins font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Additional Message
+                  </label>
+                  <textarea
+                    name="message"
+                    placeholder="Tell us more about your security requirements..."
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows="4"
+                    className="w-full p-4 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-[12px] text-gray-900 dark:text-white font-poppins placeholder-gray-500 dark:placeholder-gray-400 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-300 resize-none"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-poppins font-semibold text-[18px] py-4 px-6 rounded-[12px] transition-all duration-300 transform hover:scale-105 disabled:hover:scale-100 shadow-lg hover:shadow-xl"
+                >
+                  {isSubmitting ? 'Sending Message...' : 'Send Message'}
+                </button>
+
+                {submitStatus === 'success' && (
+                  <div className="bg-green-100 dark:bg-green-900/30 border border-green-400 dark:border-green-500 text-green-700 dark:text-green-400 px-4 py-3 rounded-[12px] font-poppins">
+                    ✅ Message sent successfully! We'll contact you within 24 hours.
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-500 text-red-700 dark:text-red-400 px-4 py-3 rounded-[12px] font-poppins">
+                    ❌ Failed to send message. Please try again or call us directly.
+                  </div>
+                )}
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;

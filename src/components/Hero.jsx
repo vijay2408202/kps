@@ -46,7 +46,7 @@ const Hero = () => {
       </div>
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-6 sm:my-10 relative order-first md:order-last transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
-        <img src={hero} alt="security hero" className="w-[80%] xs:w-[90%] sm:w-[100%] h-[80%] xs:h-[90%] sm:h-[100%] relative z-[5] scale-x-[-1] transform transition-all duration-500 hover:scale-105" />
+        <img src={hero} alt="security hero" className="w-[80%] xs:w-[90%] sm:w-[100%] h-[80%] xs:h-[90%] sm:h-[100%] relative z-[5] scale-x-[-1]" />
 
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient animate-pulse" />

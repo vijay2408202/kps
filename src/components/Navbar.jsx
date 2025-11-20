@@ -31,8 +31,8 @@ const Navbar = () => {
       >
         <div className="flex items-center">
           <h1 className="font-poppins font-bold text-gray-900 dark:text-white text-[18px] xs:text-[20px] sm:text-[24px] leading-[24px] xs:leading-[28px] sm:leading-[32px]">
-            <span className="sm:hidden">KPS</span>
-            <span className="hidden sm:inline">Krishna Protection</span>
+            <span className="sm:hidden">S3 Group</span>
+            <span className="hidden sm:inline">S3 Group</span>
           </h1>
         </div>
 
@@ -153,10 +153,10 @@ const Navbar = () => {
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200/50 dark:border-gray-700/50">
                   <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-2">
-                    Krishna Protection Security
+                    S3 Group
                   </p>
                   <p className="text-xs text-gray-500 dark:text-gray-500 text-center">
-                    Professional Security Services
+                    Your Safety, Our Priority
                   </p>
                 </div>
               </div>
@@ -174,8 +174,8 @@ const Navbar = () => {
           <div className="flex items-center">
             <h1 className={`font-poppins font-bold text-gray-900 dark:text-white transition-all duration-300 ${isScrolled ? 'text-[16px] xs:text-[18px] sm:text-[20px] leading-[20px] xs:leading-[24px] sm:leading-[28px]' : 'text-[18px] xs:text-[20px] sm:text-[24px] leading-[24px] xs:leading-[28px] sm:leading-[32px]'
               }`}>
-              <span className="sm:hidden">KPS</span>
-              <span className="hidden sm:inline">Krishna Protection</span>
+              <span className="sm:hidden">S3 Group</span>
+              <span className="hidden sm:inline">S3 Group</span>
             </h1>
           </div>
 
@@ -261,7 +261,7 @@ const Navbar = () => {
                 {/* Mobile Menu Header */}
                 <div className="flex items-center justify-between p-6 border-b border-gray-200/50 dark:border-gray-700/50">
                   <h2 className="font-poppins font-bold text-gray-900 dark:text-white text-lg">
-                    Krishna Protection
+                    S3 Group
                   </h2>
                   <button
                     onClick={() => setToggle(false)}
@@ -304,10 +304,10 @@ const Navbar = () => {
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200/50 dark:border-gray-700/50">
                     <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-2">
-                      Krishna Protection Security
+                      S3 Group
                     </p>
                     <p className="text-xs text-gray-500 dark:text-gray-500 text-center">
-                      Professional Security Services
+                      Your Safety, Our Priority
                     </p>
                   </div>
                 </div>

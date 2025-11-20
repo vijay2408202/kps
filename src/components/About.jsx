@@ -24,11 +24,11 @@ const Business = () => {
         {/* Header Section - Centered */}
         <div ref={mainRef} className={`text-center mb-12 sm:mb-16 transform transition-all duration-700 ${isMainVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <h2 className="font-poppins font-semibold text-[28px] xs:text-[32px] sm:text-[40px] lg:text-[48px] text-gray-900 dark:text-white leading-[36px] xs:leading-[40px] sm:leading-[50px] lg:leading-[60px] mb-4 sm:mb-6">
-            About <span className="text-gradient">Krishna Protection</span> <br className="hidden sm:block" />
-            <span className="block sm:inline">Security</span>
+            About <span className="text-gradient">S3 Group</span> <br className="hidden sm:block" />
+            <span className="block sm:inline">Security Services</span>
           </h2>
           <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[16px] sm:text-[18px] lg:text-[20px] leading-[24px] sm:leading-[28px] lg:leading-[32px] max-w-full sm:max-w-[600px] lg:max-w-[800px] mx-auto px-2 sm:px-0">
-            Your trusted security partner for over two decades
+            Symbol of Security • Trust • Discipline
           </p>
         </div>
 
@@ -50,19 +50,20 @@ const Business = () => {
           <div className="text-center lg:text-left order-2 lg:order-2 px-2 sm:px-0">
             <div className="mb-6 sm:mb-8">
               <h3 className="font-poppins font-bold text-[24px] sm:text-[28px] lg:text-[32px] text-gray-900 dark:text-white mb-3 sm:mb-4">
-                20+ Years of Excellence
+                21+ Years of Excellence
               </h3>
               <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[14px] sm:text-[16px] lg:text-[18px] leading-[22px] sm:leading-[26px] lg:leading-[30px] mb-4 sm:mb-6">
-                With over 20 years of dedicated service in the security industry, Krishna Protection Security has established itself as a trusted name in Kolkata. We specialize in providing reliable, professional security services with emphasis on trained personnel, vigilance, and complete customer satisfaction.
+                S3 Group has been a trusted name in professional security since 2004, offering complete protection for institutions, housing complexes, factories, and businesses across West Bengal. We provide trained, verified, and disciplined security personnel who ensure safety, vigilance, and peace of mind.
               </p>
               <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[14px] sm:text-[16px] lg:text-[18px] leading-[22px] sm:leading-[26px] lg:leading-[30px] mb-6 sm:mb-8">
-                Our commitment to excellence and continuous improvement has made us the preferred choice for businesses, institutions, and individuals seeking comprehensive security solutions.
+                <strong>Our Mission:</strong> To deliver reliable, ethical, and efficient security solutions that safeguard lives and property.<br /><br />
+                <strong>Our Vision:</strong> To be recognized as the most dependable and professional private security service in India.
               </p>
             </div>
 
             {/* Stats Section */}
             <div className="grid grid-cols-1 xs:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
-              <StatCard endValue="20" label="Years Experience" suffix="+" />
+              <StatCard endValue="21" label="Years Experience" suffix="+" />
               <StatCard endValue="500" label="Happy Clients" suffix="+" />
               <StatCard endValue="200" label="Security Personnel" suffix="+" />
             </div>

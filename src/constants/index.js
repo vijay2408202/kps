@@ -23,23 +23,23 @@ export const features = [
   {
     id: "feature-1",
     icon: star,
-    title: "20+ Years Experience",
+    title: "21+ Years Experience",
     content:
-      "Two decades of trusted security services with proven track record in protecting businesses and individuals.",
+      "Serving with integrity and protection since 2004. Two decades of trusted security services with a proven track record in safeguarding businesses and institutions.",
   },
   {
     id: "feature-2",
     icon: shield,
     title: "Verified & Trained Guards",
     content:
-      "All our security personnel are thoroughly verified, professionally trained, and undergo regular skill enhancement programs.",
+      "All our security personnel are carefully screened, professionally trained, and verified to ensure the highest standards of safety and discipline.",
   },
   {
     id: "feature-3",
     icon: send,
-    title: "24/7 Support",
+    title: "24/7 Monitoring",
     content:
-      "Round-the-clock monitoring and support services to ensure your safety and security at all times.",
+      "Round-the-clock CCTV monitoring and surveillance services to ensure your safety and security at all times.",
   },
 ];
 
@@ -47,25 +47,25 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Krishna Protection Security has been exceptional in providing security for our school. Their guards are professional, vigilant, and excellent with children. We feel completely safe.",
+      "S3 Group has been exceptional in providing security for our school for 20 years. Their guards are professional, vigilant, and excellent with children. We feel completely safe with their services.",
     name: "Sister Mary Joseph",
-    title: "Principal, St. Mary's School",
+    title: "Principal, St. Joseph's & Mary School",
     img: people01,
   },
   {
     id: "feedback-2",
     content:
-      "We've been using Krishna Protection's services for our office complex for over 5 years. Their reliability and professionalism is unmatched. Highly recommended!",
-    name: "Rajesh Kumar",
-    title: "Facility Manager, Tech Park",
+      "We've been partnering with S3 Group for our automobile business since 2012. Their reliability, professionalism, and dedicated service is unmatched. Highly recommended for long-term security needs!",
+    name: "Pratima Automobile",
+    title: "Management Team",
     img: people02,
   },
   {
     id: "feedback-3",
     content:
-      "The security services for our events have been outstanding. Their team is well-coordinated, punctual, and handles crowd management expertly.",
-    name: "Priya Sharma",
-    title: "Event Manager, Elite Events",
+      "S3 Group provided outstanding security services for our infrastructure projects from 2018 to 2023. Their team is well-coordinated, punctual, and handles site security expertly.",
+    name: "Sandipan Pramanik",
+    title: "Sandipan Pramanik Infra Pvt. Ltd.",
     img: people03,
   },
 ];
@@ -74,7 +74,7 @@ export const stats = [
   {
     id: "stats-1",
     title: "Years Experience",
-    value: "20+",
+    value: "21+",
   },
   {
     id: "stats-2",
@@ -199,59 +199,59 @@ export const clients = [
 export const services = [
   {
     id: "service-1",
-    title: "Executive Protection",
-    description: "Personal security for VIPs and executives",
+    title: "Armed & Unarmed Security Guards",
+    description: "Professional armed and unarmed security personnel",
     icon: shield,
     backgroundImage: "https://img.freepik.com/free-photo/security-guard-protecting-client_23-2148404004.jpg",
   },
   {
     id: "service-2",
-    title: "Event Security",
-    description: "Professional security for events and exhibitions",
-    icon: star,
-    backgroundImage: "https://images.unsplash.com/photo-1571283056653-e9802feac258?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "service-3",
-    title: "Property Security",
-    description: "Comprehensive security for residential and commercial properties",
-    icon: send,
-    backgroundImage: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "service-4",
-    title: "Apartment Security",
-    description: "Residential complex and apartment security services",
-    icon: shield,
-    backgroundImage: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "service-5",
-    title: "Office & Mall Security",
-    description: "Corporate and retail security solutions",
+    title: "Corporate & Industrial Security",
+    description: "Complete security solutions for businesses and factories",
     icon: star,
     backgroundImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "service-6",
-    title: "Educational Institutions",
-    description: "Security for schools, colleges, and universities",
+    id: "service-3",
+    title: "Apartment & Housing Complex Security",
+    description: "Residential security services for housing societies",
     icon: send,
-    backgroundImage: "https://img.freepik.com/free-photo/red-buildings-households_1127-2024.jpg",
+    backgroundImage: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "service-7",
-    title: "Healthcare Security",
-    description: "Hospital and healthcare facility security",
+    id: "service-4",
+    title: "Mall, Hospital & Hotel Security",
+    description: "Professional security for commercial establishments",
     icon: shield,
     backgroundImage: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
-    id: "service-8",
-    title: "Construction Site Security",
-    description: "Protection for construction sites and equipment",
+    id: "service-5",
+    title: "Event & Personal Protection",
+    description: "Security for events and VIP protection services",
     icon: star,
-    backgroundImage: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    backgroundImage: "https://images.unsplash.com/photo-1571283056653-e9802feac258?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: "service-6",
+    title: "24×7 CCTV Monitoring",
+    description: "Round-the-clock surveillance and monitoring services",
+    icon: send,
+    backgroundImage: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "service-7",
+    title: "Fire Safety & Emergency Response",
+    description: "Fire safety services and emergency response teams",
+    icon: shield,
+    backgroundImage: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "service-8",
+    title: "Access Control & Visitor Management",
+    description: "Advanced access control and visitor management systems",
+    icon: star,
+    backgroundImage: "https://img.freepik.com/free-photo/red-buildings-households_1127-2024.jpg",
   },
 ];
 
@@ -259,37 +259,37 @@ export const whyChooseUs = [
   {
     id: "reason-1",
     icon: star,
-    title: "20+ Years Experience",
-    description: "Two decades of trusted security services",
+    title: "Verified & Trained Personnel",
+    description: "Guards carefully screened and professionally trained",
   },
   {
     id: "reason-2",
     icon: shield,
-    title: "Verified & Trained Guards",
-    description: "Thoroughly background-checked personnel",
+    title: "24×7 Monitoring",
+    description: "Round-the-clock supervision and active communication",
   },
   {
     id: "reason-3",
     icon: send,
-    title: "Affordable Pricing",
-    description: "Competitive rates without compromising quality",
+    title: "Quick Response",
+    description: "Rapid action teams ready for emergencies",
   },
   {
     id: "reason-4",
     icon: star,
-    title: "24/7 Support",
-    description: "Round-the-clock monitoring and assistance",
+    title: "Cost-Effective Plans",
+    description: "Flexible solutions to suit every budget",
   },
   {
     id: "reason-5",
     icon: shield,
-    title: "Uniformed & Punctual",
-    description: "Professional appearance and timely service",
+    title: "Trusted Across West Bengal",
+    description: "Long-term partnerships with leading institutions",
   },
   {
     id: "reason-6",
     icon: send,
-    title: "Supervision & Training",
-    description: "Continuous training and quality supervision",
+    title: "Since 2004",
+    description: "21+ years of integrity and protection",
   },
 ];

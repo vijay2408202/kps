@@ -30,14 +30,14 @@ const Billing = () => {
             }`}
         >
           <h2 className="font-poppins font-semibold text-[28px] xs:text-[32px] sm:text-[40px] lg:text-[48px] text-gray-900 dark:text-white leading-[36px] xs:leading-[40px] sm:leading-[50px] lg:leading-[76.8px] mb-4 sm:mb-6">
-            Why Choose <span className="text-gradient">Krishna Protection</span>?
+            Why Choose <span className="text-gradient">S3 Group</span>?
           </h2>
           <div className="px-2 sm:px-0">
             <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[14px] xs:text-[16px] sm:text-[18px] leading-[22px] xs:leading-[26px] sm:leading-[30.8px] max-w-full sm:max-w-[800px] mx-auto mb-3 sm:mb-4">
-              With two decades of experience in the security industry, we have built a reputation for excellence, reliability, and professionalism. Our comprehensive approach ensures complete peace of mind for our clients.
+              Since 2004, we have built a reputation for excellence, reliability, and professionalism. Our comprehensive approach ensures complete peace of mind for our clients across West Bengal.
             </p>
             <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[14px] xs:text-[16px] sm:text-[18px] leading-[22px] xs:leading-[26px] sm:leading-[30.8px] max-w-full sm:max-w-[800px] mx-auto">
-              We serve all over Kolkata with a team of verified, trained, and uniformed security personnel who are committed to providing the highest level of service.
+              We provide trained, verified, and disciplined security personnel who ensure safety, vigilance, and peace of mind for institutions, housing complexes, factories, and businesses.
             </p>
           </div>
         </div>
@@ -60,15 +60,15 @@ const Billing = () => {
               Ready to Secure Your Property?
             </h3>
             <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[14px] xs:text-[15px] sm:text-[16px] mb-4 sm:mb-6 max-w-full sm:max-w-[400px] mx-auto">
-              Contact us now for professional security services across Kolkata
+              Contact us now for professional security services across West Bengal
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <div className="bg-blue-600 dark:bg-blue-gradient text-white dark:text-primary font-poppins font-semibold text-[14px] xs:text-[15px] sm:text-[16px] py-2.5 sm:py-3 px-6 sm:px-8 rounded-[8px] sm:rounded-[10px] text-center">
-                Serving All Over Kolkata
+                Serving Across West Bengal
               </div>
               <div className="border-2 border-blue-600 dark:border-blue-gradient text-blue-600 dark:text-white font-poppins font-medium text-[14px] xs:text-[15px] sm:text-[16px] py-2.5 sm:py-3 px-6 sm:px-8 rounded-[8px] sm:rounded-[10px] text-center">
-                Professional & Reliable
+                Since 2004
               </div>
             </div>
           </div>

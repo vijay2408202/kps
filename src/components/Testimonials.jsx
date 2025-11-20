@@ -60,10 +60,10 @@ const Testimonials = () => {
         {/* Header Section - Centered */}
         <div ref={headerRef} className={`text-center mb-12 lg:mb-16 transform transition-all duration-700 ${isHeaderVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <h2 className="font-poppins font-semibold text-[32px] sm:text-[40px] lg:text-[48px] text-gray-900 dark:text-white leading-[40px] sm:leading-[50px] lg:leading-[76.8px] mb-4 lg:mb-6">
-            What Our <span className="text-gradient">Clients</span> Say
+            Our Esteemed <span className="text-gradient">Clients</span>
           </h2>
           <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[16px] lg:text-[18px] leading-[26px] lg:leading-[30.8px] max-w-[600px] lg:max-w-[800px] mx-auto px-4">
-            Don't just take our word for it. Here's what our satisfied clients have to say about Krishna Protection Security's professional services and commitment to excellence.
+            Trusted by leading institutions and businesses across West Bengal. Here's what our long-term clients have to say about S3 Group's professional services and dedication.
           </p>
         </div>
 
@@ -84,17 +84,17 @@ const Testimonials = () => {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 text-center">
               <StatIndicator endValue="500" label="Happy Clients" suffix="+" />
-              <StatIndicator endValue="20" label="Years Experience" suffix="+" />
+              <StatIndicator endValue="21" label="Years Since 2004" suffix="+" />
               <div>
                 <h4 className="font-poppins font-bold text-[18px] lg:text-[20px] text-blue-600 dark:text-blue-400">24/7</h4>
-                <p className="font-poppins text-gray-600 dark:text-gray-400 text-[12px] lg:text-[14px]">Support</p>
+                <p className="font-poppins text-gray-600 dark:text-gray-400 text-[12px] lg:text-[14px]">Monitoring</p>
               </div>
               <StatIndicator endValue="100" label="Reliable" suffix="%" />
             </div>
 
             <div className="mt-4 lg:mt-6 pt-4 lg:pt-6 border-t border-blue-200 dark:border-gray-600">
               <p className="font-poppins text-gray-600 dark:text-gray-400 text-[14px] lg:text-[16px] mb-4 px-2">
-                Join hundreds of satisfied clients who trust us with their security
+                Join hundreds of satisfied clients across West Bengal who trust S3 Group with their security needs
               </p>
               <a href="#contact" className="bg-blue-600 dark:bg-blue-gradient text-white dark:text-primary font-poppins font-medium text-[14px] lg:text-[16px] py-2.5 lg:py-3 px-5 lg:px-6 rounded-[10px] hover:bg-blue-700 dark:hover:bg-white dark:hover:text-primary transition-all duration-300 inline-block transform hover:scale-105">
                 Get Your Quote Today

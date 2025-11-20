@@ -56,14 +56,14 @@ const Contact = () => {
   };
 
   const services = [
-    'Executive Protection',
-    'Event Security',
-    'Property Security',
-    'Apartment Security',
-    'Office & Mall Security',
-    'Educational Institutions',
-    'Healthcare Security',
-    'Construction Site Security'
+    'Armed & Unarmed Security Guards',
+    'Corporate & Industrial Security',
+    'Apartment & Housing Complex Security',
+    'Mall, Hospital & Hotel Security',
+    'Event & Personal Protection',
+    '24×7 CCTV Monitoring',
+    'Fire Safety & Emergency Response',
+    'Access Control & Visitor Management'
   ];
 
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
@@ -90,7 +90,7 @@ const Contact = () => {
             <div className="w-16 sm:w-20 lg:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
           </div>
           <p className="font-poppins font-normal text-gray-600 dark:text-dimWhite text-[14px] xs:text-[16px] sm:text-[18px] lg:text-[20px] leading-[22px] xs:leading-[26px] sm:leading-[30px] lg:leading-[32px] max-w-full sm:max-w-[600px] lg:max-w-[700px] mx-auto mt-6 sm:mt-8 px-2 sm:px-0">
-            Ready to secure your property? Contact Krishna Protection Security for professional, reliable, and trusted security solutions available 24/7.
+            Ready to secure your property? Contact S3 Group for professional, reliable, and trusted security solutions available 24/7.
           </p>
         </div>
 
@@ -111,11 +111,14 @@ const Contact = () => {
                 </div>
                 <div className="ml-3 sm:ml-4">
                   <h3 className="font-poppins font-semibold text-[16px] sm:text-[18px] lg:text-[20px] text-gray-900 dark:text-white">Call Us</h3>
-                  <p className="text-gray-600 dark:text-dimWhite text-xs sm:text-sm">Available 24/7</p>
+                  <p className="text-gray-600 dark:text-dimWhite text-xs sm:text-sm">Contact Person: Suraj Singh</p>
                 </div>
               </div>
-              <a href="tel:+919748025247" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors font-poppins font-medium text-[14px] sm:text-[16px] lg:text-[18px]">
-                +91 97480 25247
+              <a href="tel:+919330094829" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors font-poppins font-medium text-[14px] sm:text-[16px] lg:text-[18px] block mb-2">
+                +91 93300 94829
+              </a>
+              <a href="tel:+919060557296" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors font-poppins font-medium text-[14px] sm:text-[16px] lg:text-[18px] block">
+                +91 90605 57296
               </a>
             </div>
 
@@ -126,12 +129,13 @@ const Contact = () => {
                 </div>
                 <div className="ml-3 sm:ml-4">
                   <h3 className="font-poppins font-semibold text-[16px] sm:text-[18px] lg:text-[20px] text-gray-900 dark:text-white">Location</h3>
-                  <p className="text-gray-600 dark:text-dimWhite text-xs sm:text-sm">Service Areas</p>
+                  <p className="text-gray-600 dark:text-dimWhite text-xs sm:text-sm">Our Address</p>
                 </div>
               </div>
               <p className="text-gray-700 dark:text-dimWhite font-poppins font-medium text-[14px] sm:text-base">
-                Serving All Over Kolkata<br />
-                <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Park Street, Salt Lake, New Town & More</span>
+                1 AJC Bose Road<br />
+                Kolkata 700020<br />
+                <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Serving across West Bengal</span>
               </p>
             </div>
 
@@ -151,10 +155,10 @@ const Contact = () => {
             </div>
 
             <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-4 sm:p-6 lg:p-8 rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] text-white">
-              <h3 className="font-poppins font-bold text-[18px] sm:text-[20px] lg:text-[22px] mb-3 sm:mb-4">Emergency Service</h3>
-              <p className="font-poppins text-blue-100 mb-3 sm:mb-4 text-[14px] sm:text-base">Need immediate security assistance?</p>
-              <a href="tel:+919748025247" className="inline-block bg-white/20 hover:bg-white/30 px-4 sm:px-6 py-2 sm:py-3 rounded-[10px] sm:rounded-[12px] font-poppins font-medium transition-all duration-300 text-[12px] xs:text-[14px] sm:text-base">
-                Call Now: +91 97480 25247
+              <h3 className="font-poppins font-bold text-[18px] sm:text-[20px] lg:text-[22px] mb-3 sm:mb-4">🎯 Special Offer</h3>
+              <p className="font-poppins text-blue-100 mb-3 sm:mb-4 text-[14px] sm:text-base">FREE CCTV installation & 24×7 monitoring for clients requiring 4+ guards per shift!</p>
+              <a href="tel:+919330094829" className="inline-block bg-white/20 hover:bg-white/30 px-4 sm:px-6 py-2 sm:py-3 rounded-[10px] sm:rounded-[12px] font-poppins font-medium transition-all duration-300 text-[12px] xs:text-[14px] sm:text-base">
+                Call Now: +91 93300 94829
               </a>
             </div>
           </div>

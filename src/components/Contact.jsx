@@ -56,14 +56,14 @@ const Contact = () => {
   };
 
   const services = [
-    'Armed & Unarmed Security Guards',
-    'Corporate & Industrial Security',
-    'Apartment & Housing Complex Security',
-    'Mall, Hospital & Hotel Security',
-    'Event & Personal Protection',
+    'Security Guards',
+    'Security Supervisor',
+    'Bouncer',
+    'Gunman',
+    'Bodyguard',
+    'Corporate Security',
     '24×7 CCTV Monitoring',
-    'Fire Safety & Emergency Response',
-    'Access Control & Visitor Management'
+    'Housing Complex Security'
   ];
 
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
